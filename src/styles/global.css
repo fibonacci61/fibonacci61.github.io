@@ -28,6 +28,7 @@ li {
 
 a {
     font-weight: bold;
+    text-decoration: none;
     border-bottom: 1px solid #ffd700;
     color: #ffd700;
 }
