@@ -1,16 +1,13 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Home">
+    <p>
+        Hello, I'm Faisal Malallah, aka Fibonacci. I'm a high school student
+        with an affinity for systems programming, computer engineering and
+        robotics. Take a look at my <a href="/about">about</a> page to know more
+        about me or my work, or have a peek at one of the blogs I've published on
+        this site.
+    </p>
+</BaseLayout>
