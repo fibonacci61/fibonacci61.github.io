@@ -33,6 +33,11 @@ a {
     color: #ffd700;
 }
 
+a:active,
+a:hover {
+    border-bottom: none;
+}
+
 body {
     margin: 0 auto;
     width: 100%;
