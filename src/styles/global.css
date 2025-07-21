@@ -26,10 +26,6 @@ li {
     font-size: 1.2rem;
 }
 
-li {
-    line-height: 0.5em;
-}
-
 a {
     font-weight: bold;
     border-bottom: 1px solid #ffd700;
