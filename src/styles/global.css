@@ -1,3 +1,20 @@
+@font-face {
+    font-family: dejavu-serif;
+    font-weight: bold;
+    src: url("/fonts/DejaVuSerif-Bold.woff2");
+}
+
+@font-face {
+    font-family: dejavu-sans;
+    src: url("/fonts/DejaVuSans.woff2");
+}
+
+@font-face {
+    font-family: dejavu-sans;
+    font-weight: bold;
+    src: url("/fonts/DejaVuSans-Bold.woff2");
+}
+
 html {
     background: #000350;
     color: #ffffff;
@@ -5,16 +22,14 @@ html {
 
 h1 {
     color: #ffd700;
-    font-family: serif;
-    font-weight: bold;
+    font-family: dejavu-serif;
     font-size: 3rem;
     margin: 1rem 0;
 }
 
 h2 {
     color: #ffd700;
-    font-family: serif;
-    font-weight: bold;
+    font-family: dejavu-serif;
     font-size: 1.5rem;
     margin: 1rem 0;
 }
@@ -22,7 +37,7 @@ h2 {
 p,
 li {
     color: #ffffff;
-    font-family: sans-serif;
+    font-family: dejavu-sans;
     font-size: 1.2rem;
 }
 
