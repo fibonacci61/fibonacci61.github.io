@@ -20,16 +20,19 @@ html {
     color: #ffffff;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     color: #ffd700;
     font-family: dejavu-serif;
+}
+
+h1 {
     font-size: 3rem;
     margin: 1rem 0;
 }
 
 h2 {
-    color: #ffd700;
-    font-family: dejavu-serif;
     font-size: 1.5rem;
     margin: 1rem 0;
 }
