@@ -46,7 +46,7 @@ However, there was an issue. We were still working with last year's parts exclus
 
 That meant that as long as we didn't have rotation sensors, we would have to still be using time-based Kinesis, and I would have to maintain both time-based and position-based Kinesis simulatenously.
 
-### The wait
+### The Wait
 
 The scrimmage took place on 2024-11-27. The parts hadn't arrived. That means that not only did the robot lack any tracking capabilities, but it was also literally just a slightly modified hero bot! Luckily, most other competitors were in a very similar state. I believe there was only a single team that came with a bot with an intake and a mobile goal clamp, and I kid you not, everyone else either had a hero bot or a push bot. It was just ridiculous.
 
@@ -60,6 +60,6 @@ I presented my design to the team. Featuring only a drivetrain and a mobile goal
 
 For the next few months I continued to iterate over my robot code. I scrapped the auton-recording idea and got rid of Kinesis. I made a novel design pattern that I eventually scrapped too. I might actually describe it in another post. Then, in May 2025 I started contributing to [vexide](https://vexide.dev) under the name _Fibonacci_, because I just really liked the golden ratio for some reason.
 
-Note: It's not because of _Steel Ball Run_. Once again, shoot me an email for proof.
+__Note__: It's not because of _Steel Ball Run_. Once again, shoot me an email for proof.
 
 At present, I have no intention of rejoining my old team. Rather, I'm starting my own. So, if you're in VEX too, then I'll see you at Worlds, where I'll hopefully be competing alongside _95900A Rainbots_. Stay tuned!
