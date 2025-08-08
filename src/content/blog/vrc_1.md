@@ -36,7 +36,7 @@ This lead me to write a program that could record and store the bot's movements,
 
 ### Kinesis
 
-Kinesis was actually two different DSLs: one that could store a robot's configuration, which specified drivetrain motors and other mechanisms, and one that stored recordings as series of controller inputs. The configuration file fulfilled the idea of non-programmers configuring the robot. Despite that, it was never used by anyone other than me. On the other hand, you might have caught a design flaw within the recording format, and that is that it is time-based.
+Kinesis was actually two different domain-specific languages (DSLs): one that could store a robot's configuration, which specified drivetrain motors and other mechanisms, and one that stored recordings as series of controller inputs. The configuration file fulfilled the idea of non-programmers configuring the robot. Despite that, it was never used by anyone other than me. On the other hand, you might have caught a design flaw within the recording format, and that is that it is time-based.
 
 Time-based autons lack precision and are highly-volatile. The robot that recorded the auton must be identical to the bot that plays it. Additionally, I'd just discovered robot odometry. So, I tweaked the format to record points on the field, downloaded a copy of the position tracking paper by _Team 5225A The E-Bots Pilons_, and wrote my implementation of odometry.
 
