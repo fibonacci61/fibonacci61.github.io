@@ -14,7 +14,7 @@ So, I'm guessing that the reason my school picked me was because they saw me hac
 
 My school took us on a field trip to Kuwait University, the hosts of VRC in Kuwait, for the big day. I was joined by five other middle school kids, all significantly shorter than me. I looked more like I was from the high school team. [Email](mailto:phi@fibn.cc) me for proof.
 
-My memory regarding the finer details is fuzzy, but I got my first look into VRC that day. I immediately knew what my role was, and I truthfully informed my teammates that I was going to be the programmer. After the initial presentation by Dr. Noura Aljeri, we moved into a new room where we would start building and programming our bot while an instructor tried explaining what everything was in a very low voice. I don't think anyone heard or understood more than 50% of what he said that day.
+My memory regarding the finer details is fuzzy, but I got my first look into VRC that day. I immediately knew what my role was, and I truthfully informed my teammates that I was going to be the programmer. After the initial presentation by Dr. Noura Aljeri, we moved into a new room where we would start building and programming our bot while an instructor tried explaining what everything was in a very quiet voice. I don't think anyone heard or understood more than 50% of what he said that day.
 
 Afterwards, in preparation, I started taught myself the C programming language with the ritual I usually like to take whenever I learn a new langauge: and that is to write a bitmap image parser.
 
@@ -28,7 +28,7 @@ So, will all that, I don't think it will come as a surprise to you that we ranke
 
 ## V5RC
 
-This was the _High Stakes_ season. This year, I graduated middle school and was placed in the high school team. This year, I was focused, and I wasn't going to allow myself to repeat what I did.
+This was the _High Stakes_ season. This year, I graduated middle school and was placed in the high school team. This year, I was focused, and I wasn't going to allow myself to repeat what I did last time.
 
 Reprising my role as programmer, I began preparing the robot's code from 2025-09-05, before the team's first meeting. I developed the philosphy that programming was a trivial task, and that most effort should be spent on designing and driving the robot. With this philosphy, I also believed that other members should have a means of configuring the robot without diving into the code, in case of an emergency where I wasn't available.
 
