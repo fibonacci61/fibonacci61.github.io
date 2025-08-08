@@ -12,11 +12,11 @@ So, I'm guessing that the reason my school picked me was because they saw me hac
 
 ## VIQRC
 
-My school took us on a field trip to Kuwait University, the hosts of VRC in Kuwait, for the big day. I was joined by five other middle school kids, all significantly shorter than me. I looked more like I was from the high school team. [Email](mailto:phi@fibn.cc) me for proof.
+My school took us on a field trip to _Kuwait University_, the hosts of VRC in Kuwait, for the big day. I was joined by five other middle school kids, all significantly shorter than me. I looked more like I was from the high school team. [Email](mailto:phi@fibn.cc) me for proof.
 
 My memory regarding the finer details is fuzzy, but I got my first look into VRC that day. I immediately knew what my role was, and I truthfully informed my teammates that I was going to be the programmer. After the initial presentation by Dr. Noura Aljeri, we moved into a new room where we would start building and programming our bot while an instructor tried explaining what everything was in a very quiet voice. I don't think anyone heard or understood more than 50% of what he said that day.
 
-Afterwards, in preparation, I started taught myself the C programming language with the ritual I usually like to take whenever I learn a new langauge: and that is to write a bitmap image parser.
+Afterwards, in preparation, I taught myself the _C programming language_ with the ritual I usually like to take whenever I learn a new langauge: writing a bitmap image parser.
 
 Yep.
 
