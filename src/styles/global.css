@@ -27,6 +27,10 @@ h3 {
     font-family: dejavu-serif;
 }
 
+.white {
+    color: #ffffff;
+}
+
 h1 {
     font-size: 3rem;
     margin: 1rem 0;

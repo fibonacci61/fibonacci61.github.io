@@ -1,7 +1,36 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+export type BlogPost = {
+    data: {
+        title: string;
+        date: string;
+    };
+    render: () => Promise<{ Content: any }>;
+    content: any;
+    url: string;
+};
+
+let posts_raw = await getCollection("blog");
+let posts = posts_raw.map((p: { slug: string }) => {
+    return {
+        ...p,
+        url: "/" + p.slug,
+    };
+}) as any as BlogPost[];
+
+posts.sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
 ---
 
 <BaseLayout title="Blog">
-    <p>TBA</p>
+    {
+        posts.map((post: BlogPost) => (
+            <h2 class="white">
+                {post.data.date} / <a href={post.url}>{post.data.title}</a>
+            </h2>
+        ))
+    }
 </BaseLayout>
