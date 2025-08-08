@@ -54,7 +54,7 @@ Meetings slowed down after that. It was mid-term season again, most of the team 
 
 Finally, on 2024-12-30, after heavily studying the dynamics of the game and the robot meta, the parts were here.
 
-### Departure
+## Departure
 
 I presented my design to the team. Featuring only a drivetrain and a mobile goal clamp, it was incomplete, but I would try to finish it in the future. For now all that we needed to do was build it. Except, we didn't have everything. Namely, we were missed screws long enough for the drivetrain's screw joints. I suggested that we buy some longer screws and continue building tomorrow. But the coach insisted that we hadn't enough time until the competition. Despite my protests, she was adamant. Also, I found a flaw in my CAD design. I used the wrong gear size for some of the drivetrain gears. I said I'd fix it immediately. But my coach with my teammates elected to follow a design published on YouTube. I told them it wouldn't work for various reasons that they didn't seem to even comprehend. So, in that moment, I decided to resign from that team, keeping quiet until the next meeting was scheduled where I revealed my intentions to my coach.
 
