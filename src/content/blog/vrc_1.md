@@ -62,4 +62,4 @@ For the next few months I continued to iterate over my robot code. I scrapped th
 
 __Note__: It's not because of _Steel Ball Run_. Once again, shoot me an email for proof.
 
-At present, I have no intention of rejoining my old team. Rather, I'm starting my own. So, if you're in VEX too, then I'll see you at Worlds, where I'll hopefully be competing alongside _95900A Rainbots_. Stay tuned!
+That concludes the first part of this blog series. Additional parts will be added in the future as I gain things to discuss. Thank you for reading.
