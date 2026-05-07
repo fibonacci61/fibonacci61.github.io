@@ -3,20 +3,32 @@
     src: url("/fonts/RobotoSlab-VariableFont_wght.woff2");
 }
 
+:root {
+    --background: #0b1020;
+    --text: #f0efe7;
+    --muted: #aeb3c2;
+    --accent: #c9b05f;
+    --accent-soft: #e2cf8c;
+    /* CONSIDER LATER
+    --accent: #f5c542;
+    --accent-soft: #ffe08a;
+    */
+}
+
 html {
-    background: #000350;
-    color: #ffffff;
+    background: var(--background);
+    color: var(--text);
     font-family: roboto-slab, serif;
 }
 
 h1,
 h2,
 h3 {
-    color: #ffd700;
+    color: var(--accent-soft);
 }
 
 .white {
-    color: #ffffff;
+    color: var(--text);
 }
 
 h1 {
@@ -31,7 +43,7 @@ h2 {
 
 p,
 li {
-    color: #ffffff;
+    color: var(--text);
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -39,8 +51,8 @@ li {
 a {
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 1px solid #ffd700;
-    color: #ffd700;
+    border-bottom: 1px solid var(--accent);
+    color: var(--accent-soft);
 }
 
 a:active,
@@ -67,7 +79,7 @@ ul {
 }
 
 .muted {
-    color: #d7d9ff;
+    color: var(--muted);
 }
 
 .post-summary {
@@ -108,12 +120,12 @@ ul {
 }
 
 .tag {
-    border: 1px solid #ffd700;
+    border: 1px solid var(--accent);
     padding: 0.1rem 0.45rem;
     font-size: 0.9rem;
 }
 
 .tag:hover,
 .tag:active {
-    border: 1px solid #ffffff;
+    border: 1px solid var(--accent-soft);
 }
