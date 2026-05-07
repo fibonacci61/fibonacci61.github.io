@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+    getAllTags,
+    getPostsByTag,
+    postsWithUrls,
+    sortPostsByDate,
+    tagHref,
+} from "../../utils/blog";
+
+export async function getStaticPaths() {
+    let posts = postsWithUrls(await getCollection("blog"));
+
+    return getAllTags(posts).map((tag) => ({
+        params: { tag },
+        props: { tag },
+    }));
+}
+
+let { tag } = Astro.props;
+let posts = sortPostsByDate(
+    getPostsByTag(postsWithUrls(await getCollection("blog")), tag),
+);
+---
+
+<BaseLayout title={`Tag: ${tag}`}>
+    <p>
+        <a href="/tags">All tags</a>
+    </p>
+
+    {
+        posts.map((post) => (
+            <article class="post-summary">
+                <h2>
+                    <a href={post.url}>{post.data.title}</a>
+                </h2>
+                <p class="muted">{post.data.date}</p>
+                <p class="tag-list">
+                    {(post.data.tags ?? []).map((postTag) => (
+                        <a class="tag" href={tagHref(postTag)}>{postTag}</a>
+                    ))}
+                </p>
+            </article>
+        ))
+    }
+</BaseLayout>

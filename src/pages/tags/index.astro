@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getAllTags, postsWithUrls, tagHref } from "../../utils/blog";
+
+let posts = postsWithUrls(await getCollection("blog"));
+let tags = getAllTags(posts);
+---
+
+<BaseLayout title="Tags">
+    <p>
+        Tags are lightweight paths through the notes. They are here to connect
+        related posts without turning every interest into a permanent section.
+    </p>
+
+    <ul class="tag-list block-tags">
+        {
+            tags.map((tag) => (
+                <li><a class="tag" href={tagHref(tag)}>{tag}</a></li>
+            ))
+        }
+    </ul>
+</BaseLayout>

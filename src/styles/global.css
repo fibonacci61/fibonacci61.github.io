@@ -46,6 +46,7 @@ li {
     color: #ffffff;
     font-family: dejavu-sans;
     font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 a {
@@ -65,4 +66,69 @@ body {
     width: 100%;
     max-width: 100ch;
     padding: 1rem;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    font-family: dejavu-sans;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+.muted {
+    color: #d7d9ff;
+}
+
+.post-summary {
+    margin: 1.5rem 0;
+}
+
+.post-summary h2 {
+    margin-bottom: 0.25rem;
+}
+
+.post-summary p {
+    margin: 0.25rem 0;
+}
+
+.post-list li {
+    margin: 0.6rem 0;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-left: 0;
+}
+
+.tag-list li {
+    list-style: none;
+}
+
+.inline-tags {
+    display: inline-flex;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.block-tags {
+    margin-top: 1rem;
+}
+
+.tag {
+    border: 1px solid #ffd700;
+    padding: 0.1rem 0.45rem;
+    font-family: dejavu-sans;
+    font-size: 0.9rem;
+}
+
+.tag:hover,
+.tag:active {
+    border: 1px solid #ffffff;
 }

@@ -1,6 +1,7 @@
 ---
 title: "VRC Part 1"
 date: "2025-08-08"
+tags: ["robotics", "vex", "systems", "personal"]
 ---
 ## Invitation
 

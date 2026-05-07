@@ -1,13 +1,60 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { postsWithUrls, sortPostsByDate, tagHref } from "../utils/blog";
+
+let posts = sortPostsByDate(postsWithUrls(await getCollection("blog"))).slice(
+    0,
+    3,
+);
 ---
 
 <BaseLayout title="Home">
     <p>
-        Hello, I'm Faisal Malallah, aka Fibonacci. I'm a high school student
-        who likes systems programming, computer engineering and robotics.
-        Take a look at my <a href="/about">about</a> page to know more about me
-        or my work, or have a peek at one of the blogs I've published on this
-        website.
+        I'm Faisal Malallah, formerly known online as Fibonacci. I'm a student
+        in Kuwait interested in robotics, systems programming, computer
+        engineering, and the small details that make machines understandable.
     </p>
+    <p>
+        This site is a notebook for projects, tools, hobbies, and whatever else
+        I am trying to understand. For a compact list of my technical work, see <a
+            href="/projects">projects</a
+        >. For the longer version, read the notes below.
+    </p>
+
+    <h2>Featured</h2>
+    <ul>
+        <li>
+            <a href="/vrc_1">VRC Part 1</a> - how I got into robotics.
+        </li>
+        <li>
+            <a href="https://venice.fibn.cc/">Venice</a> - a project I am the main
+            developer of.
+        </li>
+        <li>
+            <a href="https://github.com/fibonacci61/yaro">Yaro</a> - a small RISC-V
+            operating system experiment.
+        </li>
+    </ul>
+
+    <h2>Latest Notes</h2>
+    <ul class="post-list">
+        {
+            posts.map((post) => (
+                <li>
+                    <a href={post.url}>{post.data.title}</a>
+                    <span class="muted"> / {post.data.date}</span>
+                    {(post.data.tags ?? []).length > 0 && (
+                        <span class="tag-list inline-tags">
+                            {(post.data.tags ?? []).map((tag) => (
+                                <a class="tag" href={tagHref(tag)}>
+                                    {tag}
+                                </a>
+                            ))}
+                        </span>
+                    )}
+                </li>
+            ))
+        }
+    </ul>
 </BaseLayout>

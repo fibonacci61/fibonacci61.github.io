@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import type { BlogPost } from "./blog.astro";
+import { tagHref, type BlogPost } from "../utils/blog";
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
@@ -19,7 +19,18 @@ const { Content } = await page.render();
 
 <BaseLayout title={`${page.data.title}`}>
     <section>
-        <h3 class="white">Date: {page.data.date}</h3>
+        <p class="muted">{page.data.date}</p>
+        {
+            (page.data.tags ?? []).length > 0 && (
+                <p class="tag-list">
+                    {(page.data.tags ?? []).map((tag) => (
+                        <a class="tag" href={tagHref(tag)}>
+                            {tag}
+                        </a>
+                    ))}
+                </p>
+            )
+        }
     </section>
     <Content />
 </BaseLayout>
