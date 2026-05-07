@@ -1,30 +1,18 @@
 @font-face {
-    font-family: dejavu-serif;
-    font-weight: bold;
-    src: url("/fonts/DejaVuSerif-Bold.woff2");
-}
-
-@font-face {
-    font-family: dejavu-sans;
-    src: url("/fonts/DejaVuSans.woff2");
-}
-
-@font-face {
-    font-family: dejavu-sans;
-    font-weight: bold;
-    src: url("/fonts/DejaVuSans-Bold.woff2");
+    font-family: roboto-slab;
+    src: url("/fonts/RobotoSlab-VariableFont_wght.woff2");
 }
 
 html {
     background: #000350;
     color: #ffffff;
+    font-family: roboto-slab, serif;
 }
 
 h1,
 h2,
 h3 {
     color: #ffd700;
-    font-family: dejavu-serif;
 }
 
 .white {
@@ -44,7 +32,6 @@ h2 {
 p,
 li {
     color: #ffffff;
-    font-family: dejavu-sans;
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -73,7 +60,6 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem 1rem;
-    font-family: dejavu-sans;
 }
 
 ul {
@@ -124,7 +110,6 @@ ul {
 .tag {
     border: 1px solid #ffd700;
     padding: 0.1rem 0.45rem;
-    font-family: dejavu-sans;
     font-size: 0.9rem;
 }
 
