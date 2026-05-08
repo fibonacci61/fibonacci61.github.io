@@ -129,3 +129,102 @@ ul {
 .tag:active {
     border: 1px solid var(--accent-soft);
 }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.gallery figure {
+    margin: 0;
+    max-width: 100%;
+}
+
+.gallery img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 25rem;
+    max-height: 22rem;
+}
+
+.spoiler {
+    position: relative;
+}
+
+.spoiler-toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+.spoiler-frame {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.spoiler-frame img {
+    filter: blur(1.5rem) brightness(0.45) saturate(0.7);
+    transition: filter 140ms ease;
+}
+
+.spoiler-cover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: var(--text);
+    text-align: center;
+    text-shadow: 0 1px 0 var(--background);
+    background: color-mix(in srgb, var(--background) 55%, transparent);
+}
+
+.spoiler-cover span:first-child {
+    color: var(--accent-soft);
+    font-weight: bold;
+}
+
+.spoiler-cover span:last-child {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.spoiler-toggle:focus-visible + .spoiler-frame {
+    outline: 2px solid var(--accent-soft);
+    outline-offset: 0.25rem;
+}
+
+.spoiler-toggle:checked + .spoiler-frame img {
+    filter: none;
+}
+
+.spoiler-toggle:checked + .spoiler-frame .spoiler-cover {
+    display: none;
+}
+
+.text-spoiler {
+    display: inline;
+    border-radius: 0.2rem;
+    padding: 0 0.2rem;
+    color: transparent;
+    text-shadow: 0 0 0.9rem var(--text);
+    cursor: pointer;
+    transition:
+        color 120ms ease,
+        text-shadow 120ms ease;
+}
+
+.text-spoiler:focus {
+    color: var(--text);
+    text-shadow: none;
+    outline: 2px solid var(--accent-soft);
+    outline-offset: 0.15rem;
+}

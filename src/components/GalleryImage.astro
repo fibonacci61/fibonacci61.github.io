@@ -1,0 +1,31 @@
+---
+type Props = {
+    src: string;
+    alt?: string;
+    spoiler?: string;
+};
+
+const { src, alt = "", spoiler } = Astro.props;
+const id = spoiler
+    ? "spoiler-" + src.replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-|-$/g, "")
+    : undefined;
+---
+
+{
+    spoiler ? (
+        <figure class="spoiler">
+            <input class="spoiler-toggle" type="checkbox" id={id} />
+            <label class="spoiler-frame" for={id}>
+                <img src={src} alt={alt} />
+                <span class="spoiler-cover">
+                    <span>{spoiler}</span>
+                    <span>Click to reveal</span>
+                </span>
+            </label>
+        </figure>
+    ) : (
+        <figure>
+            <img src={src} alt={alt} />
+        </figure>
+    )
+}
