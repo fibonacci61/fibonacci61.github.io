@@ -19,7 +19,17 @@ const { Content } = await page.render();
 
 <BaseLayout title={`${page.data.title}`}>
     <section>
-        <p class="muted">{page.data.date}</p>
+        <p class="muted">
+            Published: {page.data.date}
+            {
+                page.data.updated && (
+                    <>
+                        <br />
+                        Updated: {page.data.updated}
+                    </>
+                )
+            }
+        </p>
         {
             (page.data.tags ?? []).length > 0 && (
                 <p class="tag-list">

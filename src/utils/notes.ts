@@ -3,6 +3,7 @@ export type Note = {
     data: {
         title: string;
         date: string;
+        updated?: string;
         tags?: string[];
     };
     render: () => Promise<{ Content: any }>;
