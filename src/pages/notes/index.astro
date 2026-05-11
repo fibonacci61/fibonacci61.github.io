@@ -1,15 +1,20 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { notesWithUrls, sortNotesByDate, tagHref, type Note } from "../../utils/notes";
+import {
+    notesWithUrls,
+    sortNotesByDate,
+    tagHref,
+    type Note,
+} from "../../utils/notes";
 
 let notes = sortNotesByDate(notesWithUrls(await getCollection("notes")));
 ---
 
 <BaseLayout title="Notes">
     <p>
-        Chronological notes about projects, robotics, programming, and anything
-        else I keep thinking about.
+        Notes about projects, robotics, programming, hobbies, and other things I
+        wanted to share.
     </p>
     {
         notes.map((post: Note) => (
@@ -18,15 +23,15 @@ let notes = sortNotesByDate(notesWithUrls(await getCollection("notes")));
                     <a href={post.url}>{post.data.title}</a>
                 </h2>
                 <p class="muted">{post.data.date}</p>
-                {
-                    (post.data.tags ?? []).length > 0 && (
-                        <p class="tag-list">
-                            {(post.data.tags ?? []).map((tag) => (
-                                <a class="tag" href={tagHref(tag)}>{tag}</a>
-                            ))}
-                        </p>
-                    )
-                }
+                {(post.data.tags ?? []).length > 0 && (
+                    <p class="tag-list">
+                        {(post.data.tags ?? []).map((tag) => (
+                            <a class="tag" href={tagHref(tag)}>
+                                {tag}
+                            </a>
+                        ))}
+                    </p>
+                )}
             </article>
         ))
     }
