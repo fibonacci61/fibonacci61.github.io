@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
+    getAllTags,
     notesWithUrls,
     sortNotesByDate,
     tagHref,
@@ -9,6 +10,7 @@ import {
 } from "../../utils/notes";
 
 let notes = sortNotesByDate(notesWithUrls(await getCollection("notes")));
+let tags = getAllTags(notes);
 ---
 
 <BaseLayout title="Notes">
@@ -16,6 +18,18 @@ let notes = sortNotesByDate(notesWithUrls(await getCollection("notes")));
         Notes about projects, robotics, programming, hobbies, and other things I
         wanted to share.
     </p>
+
+    <div class="filter-row" aria-label="Note filters">
+        <span class="filter-label">Filter:</span>
+        <ul class="tag-list filter-list">
+            {
+                tags.map((tag) => (
+                    <li><a class="tag" href={tagHref(tag)}>{tag}</a></li>
+                ))
+            }
+        </ul>
+    </div>
+
     {
         notes.map((post: Note) => (
             <article class="post-summary">

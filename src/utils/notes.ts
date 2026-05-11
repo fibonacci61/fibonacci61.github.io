@@ -41,5 +41,5 @@ export function getNotesByTag(notes: Note[], tag: string): Note[] {
 }
 
 export function tagHref(tag: string): string {
-    return "/tags/" + encodeURIComponent(tag);
+    return "/notes/tags/" + encodeURIComponent(tag);
 }

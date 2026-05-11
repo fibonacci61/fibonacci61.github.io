@@ -1,13 +1,13 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
     getAllTags,
     getNotesByTag,
     notesWithUrls,
     sortNotesByDate,
     tagHref,
-} from "../../utils/notes";
+} from "../../../utils/notes";
 
 export async function getStaticPaths() {
     let notes = notesWithUrls(await getCollection("notes"));
@@ -26,7 +26,7 @@ let posts = sortNotesByDate(
 
 <BaseLayout title={`Tag: ${tag}`}>
     <p>
-        <a href="/tags">All tags</a>
+        <a href="/notes">All notes</a>
     </p>
 
     {
