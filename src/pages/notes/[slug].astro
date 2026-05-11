@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { tagHref, type BlogPost } from "../utils/blog";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { tagHref, type Note } from "../../utils/notes";
 
 export async function getStaticPaths() {
-    const posts = await getCollection("blog");
+    const posts = await getCollection("notes");
     return posts.map((page: any) => ({
         params: { slug: page.slug },
         props: { page },
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { page: anyPage } = Astro.props;
-const page: BlogPost = anyPage as BlogPost;
+const page: Note = anyPage as Note;
 
 const { Content } = await page.render();
 ---

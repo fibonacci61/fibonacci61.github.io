@@ -3,24 +3,24 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
     getAllTags,
-    getPostsByTag,
-    postsWithUrls,
-    sortPostsByDate,
+    getNotesByTag,
+    notesWithUrls,
+    sortNotesByDate,
     tagHref,
-} from "../../utils/blog";
+} from "../../utils/notes";
 
 export async function getStaticPaths() {
-    let posts = postsWithUrls(await getCollection("blog"));
+    let notes = notesWithUrls(await getCollection("notes"));
 
-    return getAllTags(posts).map((tag) => ({
+    return getAllTags(notes).map((tag) => ({
         params: { tag },
         props: { tag },
     }));
 }
 
 let { tag } = Astro.props;
-let posts = sortPostsByDate(
-    getPostsByTag(postsWithUrls(await getCollection("blog")), tag),
+let posts = sortNotesByDate(
+    getNotesByTag(notesWithUrls(await getCollection("notes")), tag),
 );
 ---
 

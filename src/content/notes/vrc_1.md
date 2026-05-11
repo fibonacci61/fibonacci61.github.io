@@ -63,4 +63,4 @@ For the next few months I continued to iterate over my robot code. I scrapped th
 
 __Note__: It's not because of _Steel Ball Run_. Once again, shoot me an email for proof.
 
-That concludes the first part of this blog series. Additional parts will be added in the future as I gain things to discuss. Thank you for reading.
+That concludes the first part of this notes series. Additional parts will be added in the future as I gain things to discuss. Thank you for reading.

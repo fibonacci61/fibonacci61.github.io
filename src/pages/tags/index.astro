@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getAllTags, postsWithUrls, tagHref } from "../../utils/blog";
+import { getAllTags, notesWithUrls, tagHref } from "../../utils/notes";
 
-let posts = postsWithUrls(await getCollection("blog"));
-let tags = getAllTags(posts);
+let notes = notesWithUrls(await getCollection("notes"));
+let tags = getAllTags(notes);
 ---
 
 <BaseLayout title="Tags">

@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import { postsWithUrls, sortPostsByDate, tagHref } from "../utils/blog";
+import { notesWithUrls, sortNotesByDate, tagHref } from "../utils/notes";
 
-let posts = sortPostsByDate(postsWithUrls(await getCollection("blog"))).slice(
+let notes = sortNotesByDate(notesWithUrls(await getCollection("notes"))).slice(
     0,
     3,
 );
@@ -33,14 +33,14 @@ let posts = sortPostsByDate(postsWithUrls(await getCollection("blog"))).slice(
             operating system experiment.
         </li>
         <li>
-            <a href="/vrc_1">VRC Part 1</a> - how I got into robotics.
+            <a href="/notes/vrc_1">VRC Part 1</a> - how I got into robotics.
         </li>
     </ul>
 
     <h2>Latest Notes</h2>
     <ul class="post-list">
         {
-            posts.map((post) => (
+            notes.map((post) => (
                 <li>
                     <a href={post.url}>{post.data.title}</a>
                     <span class="muted"> / {post.data.date}</span>
